@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Information Detection and Deletion System
+</title>
+</head>
+<body style="background-color:LightCyan;">
+<div>
+    <center>
+        <h1 style="background-color:PaleTurquoise;font-size: 50px;">Personal Information Detection and Deletion System</h1>
+        <h2>Search where is input image avilable...!</h2>
+
+    <p> We got <strong>{{total_img}}</strong> similar images with same faces.</p>
+        {%for i in range(total_img)%}
+            <p><strong>Website:</strong> {{w[i]}}</p>
+            <p> <strong>Link:</strong> <a href={{l[i]}}>{{l[i]}}</a></p>
+        {% endfor %}
+
+    </center>
+
+</div>
+       <center>
+<h2>How the Personal Information Detection and Deletion System works</h2>
+
+        <p align="center">We use state-of-the-art computer vision and Deep Learning algorithms to determine the face of the person in the picture.
+            First, we extract the face of the image and normalize it. For that, we use the retina face.<br>The actual facial recognition is performed by a SFace which was shown to produce good results on various image analysis tasks.</br>
+        </p>
+        </center>
+</body>
+</html>
